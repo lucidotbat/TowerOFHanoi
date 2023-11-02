@@ -1,8 +1,8 @@
-# Luis Fernando RamÌrez Ramos, 744615
-# JosÈ AndrÈs Nacarro Ozuna, 744889
+# Luis Fernando Ram√≠rez Ramos, 744615
+# Jos√© Andr√©s Navarro Ozuna, 744889
 
-# OrganizaciÛn Y Arquitectura de Computadoras
-# Pr·ctica 1, Torres de Hanoi
+# Organizaci√≥n Y Arquitectura de Computadoras
+# Pr√°ctica 1, Torres de Hanoi
 
 .text
 	addi s0, zero, 3		# n, numero de discos
@@ -54,7 +54,7 @@ hanoi:	beq s0, t1, if			# s0 == t1 (n == 1), cuando n sea mayor a 1, se hace un 
 	
 	sw zero, 0(s1) 			# pop
 	addi s1, s1, 4 			# sumar 4 a la torre para realocarnos al nuevo punto mas alto de la torre
-	addi s3, s3, -4 		# restar 4 para aumentar el tamaÒo y poder hacer el push del nuevo valor
+	addi s3, s3, -4 		# restar 4 para aumentar el tama√±o y poder hacer el push del nuevo valor
 	sw s0, 0(s3)   			# push
 	
 	addi sp, sp, -8			# guardamos s0(n) y ra como habiamos hecho antes
@@ -83,7 +83,7 @@ hanoi:	beq s0, t1, if			# s0 == t1 (n == 1), cuando n sea mayor a 1, se hace un 
 
 if:	sw zero, 0(s1) 			# pop
 	addi s1, s1, 4  		# sumar 4 a la torre para realocarnos al nuevo punto mas alto de la torre
-	addi s3, s3, -4 		# restar 4 para aumentar el tamaÒo y poder hacer el push del nuevo valor
+	addi s3, s3, -4 		# restar 4 para aumentar el tama√±o y poder hacer el push del nuevo valor
 	sw s0, 0(s3)   			# push
 	
 	jalr ra 			# saltamos a la siguiente linea despued de haber llamado
